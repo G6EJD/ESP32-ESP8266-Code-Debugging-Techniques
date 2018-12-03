@@ -29,7 +29,7 @@ float nthroot(float number, int N){
   float error = 0.00001;
   bool NotFoundResult = true;
   while (NotFoundResult){                                       // New guess = (number / guess^(N-1) + guess*(N-1) ) / N
-    new_guess = (number/pow(guess,N-1) + guess*(N-1))/N;        // Solve using Newton newton Raphson method
+    new_guess = (number/pow(guess,N-1) + guess*(N-1))/N;        // Solve using Newton Raphson method
     if(abs(new_guess - guess) <= error) NotFoundResult = false; // Keep going until difference between new and old guess is small.
     guess = new_guess;
   }
